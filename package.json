@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/iPan7/EmployeeTrackerHW/issues"
   },
-  "homepage": "https://github.com/iPan7/EmployeeTrackerHW#readme"
+  "homepage": "https://github.com/iPan7/EmployeeTrackerHW#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
 }
