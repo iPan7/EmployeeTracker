@@ -54,8 +54,6 @@ inquirer
     })
 
 
-
-
     function noBlank(input) {
         return input !== '' || "Cannot leave blank";
       }
