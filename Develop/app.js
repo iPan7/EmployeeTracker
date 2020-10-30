@@ -13,30 +13,53 @@ const render = require("./lib/htmlRenderer");
 inquirer
     .prompt([
         {
+            type: 'list',
+            name: 'role',
+            message: "What is your role?",
+            choices: [ 'Manager', 'Engineer', 'Employee', 'Intern'],
+
+        },
+        {
             type: 'input',
             name: 'email',
-            message: "What is your email?"
+            message: "What is your email?",
+            validate: noBlank
+
+        },
+        {
+            type: 'input',
+            name: 'name',
+            message: "What is your Username?",
+            validate: noBlank
 
         },
         {
             type: 'input',
             name: 'id',
-            message: "Create a User ID"
+            message: "Create a User ID",
+            validate: noBlank
 
         },
         {
-            type: 'list',
-            name: 'role',
-            message: "What is your role?",
-            choices: [ 'Manager', 'Engineer', 'Intern'],
-
-        },
+            type: 'input',
+            name: 'officeNumber',
+            message: "What is the manager's office number?",
+            when: (answers) => answers.role === 'Manager',
+            validate: noBlank
+        }
     ])
     .then(answers => {
-        console.log(answers);
+        var main = fs.readFileSync('./templates/main.html', 'utf8');
+        main = main.replace(/{{teamTitle}}/g, teamTitle);
     })
 
-    
+
+
+
+    function noBlank(input) {
+        return input !== '' || "Cannot leave blank";
+      }
+      
 
 
 // Write code to use inquirer to gather information about the development team members,
