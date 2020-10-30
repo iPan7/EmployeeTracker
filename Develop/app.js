@@ -15,21 +15,21 @@ inquirer
         {
             type: 'list',
             name: 'role',
-            message: "What is your role?",
-            choices: [ 'Manager', 'Engineer', 'Employee', 'Intern'],
+            message: "Select Role",
+            choices: [ 'Manager', 'Engineer', 'Intern'],
 
         },
         {
             type: 'input',
             name: 'email',
-            message: "What is your email?",
+            message: "Input email",
             validate: noBlank
 
         },
         {
             type: 'input',
             name: 'name',
-            message: "What is your Username?",
+            message: "Input Username",
             validate: noBlank
 
         },
@@ -49,7 +49,7 @@ inquirer
         },
         {
             type: 'input',
-            name: 'gitHub',
+            name: 'github',
             message: "What is the Engineer's GitHub username?",
             when: (answers) => answers.role === 'Engineer',
             validate: noBlank
@@ -63,8 +63,18 @@ inquirer
         }
     ])
     .then(answers => {
-        var main = fs.readFileSync('./templates/main.html', 'utf8');
-        main = main.replace(/{{teamTitle}}/g, teamTitle);
+
+        if (answers.role === "Manager" ){
+            const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber)
+        }
+        else if (answers.role === "Intern"){
+            const intern = new Intern(answers.name, answers.id, answers.email, answers.school)
+        }
+        else if (answers.role === "Engineer"){
+            const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github)
+        }
+
+
     })
 
 
