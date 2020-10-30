@@ -46,6 +46,20 @@ inquirer
             message: "What is the manager's office number?",
             when: (answers) => answers.role === 'Manager',
             validate: noBlank
+        },
+        {
+            type: 'input',
+            name: 'gitHub',
+            message: "What is the Engineer's GitHub username?",
+            when: (answers) => answers.role === 'Engineer',
+            validate: noBlank
+        },
+        {
+            type: 'input',
+            name: 'school',
+            message: "Which school is the intern from?",
+            when: (answers) => answers.role === 'Intern',
+            validate: noBlank
         }
     ])
     .then(answers => {
