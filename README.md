@@ -171,5 +171,9 @@ You are required to submit the following:
 
 * A video demonstrating the entirety of the app's functionality 
 
+Here is the link to the app's functionality
+
+https://youtu.be/180S_Jqg5HI
+
 - - -
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
