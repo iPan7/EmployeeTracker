@@ -2,7 +2,7 @@
 
 # Employee Tracker
 
-Built with Node.js and MySQL
+Built with Node.js and Inquirer
 
 URL of the GitHub repository: https://github.com/iPan7/EmployeeTrackerHW
 
@@ -37,13 +37,6 @@ This app uses [Inquirer](https://www.npmjs.com/package/inquirer) for collecting 
 Using this application, the user is able to do the following:
 * Add departments, roles, employees 
 * View departments, roles, employees 
-* Update employee roles 
-* Update employee managers 
-* View employees by manager 
-* Delete departments, roles, and employees 
-* View the total utilized budget of a department -- ie the combined salaries of all employees in that department 
-
-Before running the command below, the [schema.sql](https://github.com/a-li-sa/employee-tracker-cli/blob/master/model/schema.sql) script should be executed in MySQL Workbench in order for the user to connect to the database. 
 
 The application will be invoked with the following command:
 ```
