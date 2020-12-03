@@ -38,9 +38,9 @@ Using this application, the user is able to do the following:
 * Add departments, roles, employees 
 * View departments, roles, employees 
 
-The application will be invoked with the following command:
+The application will be invoked with the following command: node app.js
 ```
-node app.js
+
 ```
 
 This [video](https://youtu.be/180S_Jqg5HI) demonstrates application functionality.
