@@ -43,8 +43,6 @@ Using this application, the user is able to do the following:
 * Delete departments, roles, and employees 
 * View the total utilized budget of a department -- ie the combined salaries of all employees in that department 
 
-Before running the command below, the [schema.sql](https://github.com/a-li-sa/employee-tracker-cli/blob/master/model/schema.sql) script should be executed in MySQL Workbench in order for the user to connect to the database. 
-
 The application will be invoked with the following command:
 ```
 node app.js
