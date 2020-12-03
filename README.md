@@ -2,7 +2,7 @@
 
 # Employee Tracker
 
-Built with Node.js and MySQL
+Built with Node.js and Inquirer
 
 URL of the GitHub repository: https://github.com/iPan7/EmployeeTrackerHW
 
