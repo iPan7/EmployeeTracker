@@ -50,7 +50,7 @@ The application will be invoked with the following command:
 node app.js
 ```
 
-This [video](https://youtu.be/180S_Jqg5HI) demonstrates application functionality.
+This [video]() demonstrates application functionality.
 
 ## Built With
 
